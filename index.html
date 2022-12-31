@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 10px;
+            column-gap: 0px;
+            margin: 30px;
+        }
+
+        .grid-picture{
+            margin: 0px;
+            padding: 0px;
+            width: 300px;
+            height: 200px;
+        }
+
+        
+        .my-page-header{
+            grid-area: nav-header;
+            background-color: dodgerblue;
+            padding: 10px;
+        }
+
+        .my-page-body{
+            grid-area: main-body;
+            background-color: plum;
+            padding: 10px;
+        }
+
+        .my-page-sidebar{
+            grid-area: nav-side;
+            background-color: khaki;
+            padding: 10px;
+        }
+
+        .my-page-footer{
+            grid-area: footer;
+            background-color: chartreuse;
+            padding: 10px;
+            ;
+        }
+
+        .my-page{
+            display: grid;
+            grid-template-areas: 
+            "nav-header  nav-header  nav-header  nav-side"
+            "main-body   main-body   .           nav-side"
+            "footer      footer      footer      footer";
+            
+        }
+    </style>
+
+</head>
+<body>
+     <div class="grid">
+
+        <img class="grid-picture" src="hacker1.jpg" alt="a man with computer">
+        <img class="grid-picture" src="hacker2.jpg" alt="a man with computer">
+        <img class="grid-picture" src="hacker3.jpg" alt="a man with computer">
+        <img class="grid-picture" src="hacker4.jpg" alt="some writting">
+
+     </div>
+
+     <div class="my-page">
+        <header class="my-page-header">The Header</header>
+        <div class="my-page-body">The Body</div>
+        <div class="my-page-sidebar">The sidebar</div>
+        <footer class="my-page-footer">The Footer</footer>
+     </div>
+</body>
+</html>
